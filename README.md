@@ -1,53 +1,45 @@
-# 🧮 NITN-StatX (Java)
+# 🧮 NITN-StatX (JavaScript)
 
-**NITN-StatX** is a modular, high-performance probabilistic and statistical library in **Java**, built by **NIT Nagaland Coding Club**.  
-Perfect for analytics, data science, and backend systems.
+**NITN-StatX** is a lightweight probabilistic and statistical library for **Node.js** and browser environments.  
+Developed by **NIT Nagaland Coding Club**.
 
 ## 🚀 Features
-- Common Distributions (Normal, Uniform, Exponential, Poisson)
-- PDF, CDF, Quantiles, and Random Sampling
-- Hypothesis Tests (t-test, Chi-Square, Kolmogorov–Smirnov)
+- PDF, CDF, Quantiles for common distributions (Normal, Uniform, Exponential, Poisson)
+- Hypothesis Testing (t-test, Chi-Square, Kolmogorov–Smirnov)
 - Random Sampling & MCMC (Metropolis-Hastings)
-- Bayesian Updating (Conjugate Priors)
+- Bayesian Updating Helpers (Conjugate Priors)
 - Time Series Utilities (Moving Average, ARIMA skeleton, Kalman Filter)
-- Deterministic RNG with seeding support
+- Deterministic RNG with seeding
 
-## 🧰 Installation (Maven)
-```xml
-<dependency>
-  <groupId>edu.nitn</groupId>
-  <artifactId>nitn-statx</artifactId>
-  <version>0.1.0</version>
-</dependency>
+## 🧰 Installation
+```bash
+npm install nitn-statx
 ```
 
 ## 🧪 Quick Start
 
-```java
-import edu.nitn.statx.distributions.Normal;
+```javascript
+import { Normal } from "nitn-statx";
 
-public class Main {
-    public static void main(String[] args) {
-        Normal dist = new Normal(0.0, 1.0);
-        double p = dist.cdf(1.96);
-        double[] samples = dist.sample(1000);
-        System.out.println("CDF at 1.96: " + p);
-    }
-}
+const dist = new Normal(0, 1);
+const p = dist.cdf(1.96);
+const samples = dist.sample(1000);
+
+console.log("CDF at 1.96:", p);
 ```
 
 ## 📂 Project Structure
 
 ```
-nitn-statx-java/
-├── src/main/java/edu/nitn/statx/
+nitn-statx-js/
+├── src/
 │   ├── distributions/
 │   ├── stats/
 │   ├── sampling/
 │   ├── bayesian/
 │   └── timeseries/
-├── src/test/java/
 ├── examples/
+├── tests/
 └── README.md
 ```
 
@@ -55,13 +47,13 @@ nitn-statx-java/
 
 We welcome contributions from students and open-source developers:
 
-1. Fork the repository  
-2. Clone your fork and create a new branch  
-3. Implement your feature or fix with unit tests  
-4. Run `mvn test` to ensure all tests pass  
-5. Submit a Pull Request  
+1. Fork the repo  
+2. Run `npm install`  
+3. Add your feature or fix with tests  
+4. Run `npm test` to verify  
+5. Submit a Pull Request 🚀
 
-Please follow standard Java conventions and write clear, documented code.
+Follow standard JavaScript conventions and ensure code is well-documented.
 
 ## 🧑‍💻 Maintainers
 
